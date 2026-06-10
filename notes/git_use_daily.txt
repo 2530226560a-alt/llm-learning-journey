@@ -1,5 +1,7 @@
 git add .
 git commit  -m " 每日的记录内容 "
+git  push
+//
 git branch -M main
 git push -u origin main
 

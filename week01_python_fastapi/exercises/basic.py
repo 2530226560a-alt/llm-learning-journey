@@ -294,3 +294,22 @@ def stream():
 for item in stream():
     print(item)
 # 生成器真正迭代结束后再打印。
+
+
+
+
+
+def square_nums(nums:list[int]):
+    for i in nums:
+        yield i ** 2
+
+nums = [1,2,3,4,5]
+square = square_nums(nums)
+square1 = (i**2 for i in nums)
+print(square)
+print(square1)
+print(next(square))
+print(next(square))
+print(next(square))
+print(next(square))
+print(next(square))

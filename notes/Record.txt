@@ -1,0 +1,4 @@
+python镜像源： -i https://pypi.tuna.tsinghua.edu.cn/simple
+虚拟环境的创建：python -m venv .venv
+虚拟环境的激活：.venv\Scripts\activate
+

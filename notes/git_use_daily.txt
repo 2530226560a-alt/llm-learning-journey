@@ -15,3 +15,13 @@ origin  https://github.com/2530226560a-alt/llm-learning-journey.git (push)
 之后进行测试：
 git ls-remote https://github.com/2530226560a-alt/llm-learning-journey.git
 如果这个也报 Connection  was  reset   ，基本就是网络代理的原因。
+
+怎么处理网络代理的问题？
+1. 首先你访问 https://github.com 如果打不开，那么就是网络问题
+
+2. 如果可以打开 Github ，但是 git push 不行，因为浏览器走了代理，但是 Git 没走代理
+
+配置代码：(端口从梯子工具中去找)
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+ 

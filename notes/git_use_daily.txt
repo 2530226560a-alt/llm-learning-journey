@@ -1,0 +1,15 @@
+git add .
+git commit  -m " 每日的记录内容 "
+git branch -M main
+git push -u origin main
+
+如果最后出现报错：git push  出现报错，可能是网络代理的原因
+
+git  remote -v 
+正常类似：
+origin  https://github.com/2530226560a-alt/llm-learning-journey.git (fetch)
+origin  https://github.com/2530226560a-alt/llm-learning-journey.git (push)
+
+之后进行测试：
+git ls-remote https://github.com/2530226560a-alt/llm-learning-journey.git
+如果这个也报 Connection  was  reset   ，基本就是网络代理的原因。

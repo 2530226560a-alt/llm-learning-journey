@@ -12,7 +12,10 @@ def root():
 @app.post("/chat", response_model=ChatResponse)
         # response_model = ChatResponse 表示返回的数据类型是 ChatResponse
 def chat(chat_request: ChatRequest):
-    prompt = build_prompt(chat_request.question)
-    answer = fake_llm_generate(prompt)
-    token_count = estimate_tokens(prompt)
-    return ChatResponse(answer=answer, token_count=token_count,model="fake-llm-v1")
+    try:
+        prompt = build_prompt(chat_request.question)
+        answer = fake_llm_generate(prompt)
+        token_count = estimate_tokens(prompt)
+        return ChatResponse(answer=answer, token_count=token_count,model="fake-llm-v1")
+    except Exception as e:
+        return HTTPException(status_code=500, detail=str(e))    

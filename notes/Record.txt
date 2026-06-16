@@ -2,3 +2,12 @@ python镜像源： -i https://pypi.tuna.tsinghua.edu.cn/simple
 虚拟环境的创建：python -m venv .venv
 虚拟环境的激活：.venv\Scripts\activate
 
+本地运行的命令：
+uvicorn app.main:main --reload --port 8001
+
+
+docker实现自动化：
+1. 首先在你的项目下面创建一个 Docker 文件，里面写入自动化的代码
+2. 构建 Docker 镜像：docker build -t week01-llm-api
+3. 之后启动 Docker 容器： docker run -p  端口 ：端口  week01-llm-appi
+4. 可以写一个测试文件来测试 PyTest：python -m pytest -v

@@ -79,6 +79,7 @@ if __name__ == "__main__":
 
 # 题目1：判断下面代码输出什么？
 def log(func):
+    print("start01")
     def wapper():
         print("start execute")
         func()
@@ -89,7 +90,9 @@ def log(func):
 def say_hallo():
     print("Hello, World!")
 
-say_hallo()
+#say_hallo()
+
+
 
 
 
@@ -178,7 +181,35 @@ slow_task()
 
 
 
+registry = []
 
+def register(func):
+    print(f"Registering function: {func}")
+    registry.append(func)
+    return func
+
+
+@register
+def f1():
+    print("Function f1")
+
+@register
+def f2():
+    print("Function f2")    
+
+def f3():
+    print("Function f3")    
+
+
+def main():
+    print('running main()')
+    print("Registered functions:", registry)
+    f1()
+    f2()
+    f3()
+
+if __name__ == "__main__":
+    main()
 
 
 

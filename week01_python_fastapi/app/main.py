@@ -13,7 +13,7 @@ app = FastAPI(title="Week 01 LLM API Demo")
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to the Week 01 LLM API Demo"}
+    return {"message": "LLM API Demo is running"}
 
 
 @app.post("/chat", response_model=ChatResponse)

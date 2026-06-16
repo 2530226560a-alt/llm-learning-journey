@@ -8,7 +8,7 @@ git push -u origin main
 如果最后出现报错：git push  出现报错，可能是网络代理的原因
 
 git  remote -v 
-正常类似：
+正常会显示：
 origin  https://github.com/2530226560a-alt/llm-learning-journey.git (fetch)
 origin  https://github.com/2530226560a-alt/llm-learning-journey.git (push)
 
@@ -22,6 +22,6 @@ git ls-remote https://github.com/2530226560a-alt/llm-learning-journey.git
 2. 如果可以打开 Github ，但是 git push 不行，因为浏览器走了代理，但是 Git 没走代理
 
 配置代码：(端口从梯子工具中去找)
-git config --global http.proxy http://127.0.0.1:7890
-git config --global https.proxy http://127.0.0.1:7890
+git config --global http.proxy http://127.0.0.1:port
+git config --global https.proxy http://127.0.0.1:port
  
